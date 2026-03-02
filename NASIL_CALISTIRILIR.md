@@ -44,3 +44,31 @@ curl http://localhost:8080/api/contacts
 ```
 
 Tarayıcınızda veya terminalde yazdığınız veriyi JSON formatında (köşeli parantezler içinde) göreceksiniz.
+
+---
+
+## 4. Frontend (React) Kısmını Çalıştırma
+Uygulamamızın bir de web arayüzü (Frontend) bulunmaktadır. Bunu çalıştırmak için **yeni bir terminal penceresinde** şu komutları sırasıyla yazın:
+
+```bash
+cd phonebook-frontend
+npm run dev
+```
+
+Bu komutlar Vite sunucusunu başlatacak ve size bir adres (genellikle `http://localhost:5173`) verecektir. O linke tıklayarak veya tarayıcınıza yapıştırarak siteye girebilirsiniz.
+
+---
+
+## ⚡ PROJEYİ NASIL DURDURURUM? (ÇOK ÖNEMLİ)
+
+Eğer çalışmanız bittiyse ve bilgisayarınızın fanları yorulmasın diyorsanız şu iki adımı uygulamanız yeterlidir:
+
+1. **Terminal Penceresini Kapatmak (veya CTRL+C Yapmak)**
+Projeyi (ister Frontend `npm run dev` olsun, ister Backend `./gradlew bootRun` olsun) başlattığınız terminal ekranına (siyah pencereye) gidin.
+Klavyenizden **`Control`** tuşuna basılı tutarken **`C`** tuşuna basın. Ekranda `^C` yazacak ve koşan yazılar durup tekrar komut girilebilir hale gelecektir. (Veya o terminal sekmesini direkt çarpıdan kapatabilirsiniz).
+
+2. **Veritabanını Kapatmak**
+Yine terminale şu kodu yazarsanız arka planda sürekli dönen PostgreSQL motorunu da tamamen kapatmış ve bilgisayarınızı tam istirahate çekmiş olursunuz:
+```bash
+brew services stop postgresql@14
+```
